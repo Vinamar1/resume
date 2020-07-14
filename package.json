@@ -1,0 +1,30 @@
+{
+  "name": "parasharrajat-resume",
+  "version": "1.0.0",
+  "description": "Resume viewer",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parasharrajat/resume.git"
+  },
+  "keywords": [
+    "resume",
+    "rajat",
+    "parashar",
+    "cv",
+    "curriculum",
+    "vitae"
+  ],
+  "author": "Rajat Parashar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/parasharrajat/resume/issues"
+  },
+  "homepage": "https://github.com/parasharrajat/resume#readme",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.3.0"
+  }
+}

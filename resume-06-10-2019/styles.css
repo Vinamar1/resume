@@ -1,0 +1,136 @@
+:root {
+  --brand-1: rgb(0, 61, 116);
+  --primary: rgb(0, 61, 116);
+  --brand-2: rgb(255, 255, 255);
+}
+
+header {
+  background-color: var(--brand-1);
+  color: var(--brand-2);
+  padding: 2rem 1rem;
+}
+
+header [class^="col"] {
+  padding-left: 1rem;
+}
+
+header ul.social {
+  margin-left: -1rem;
+}
+
+fieldset+fieldset {
+  margin-top: 1rem;
+}
+
+fieldset:last-child {
+  margin-bottom: 2rem;
+}
+
+.fieldset-heading {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  position: relative;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.fieldset-heading::after {
+  position: absolute;
+  content: '';
+  border-bottom: 4px solid var(--brand-1);
+  bottom: -0.5rem;
+  left: 0;
+  width: 20%;
+  max-width: 4rem;
+}
+
+#contact .nav-link>h5 {
+  width: 1.5rem;
+  text-align: center;
+}
+
+#contact .nav-link>h5>i {
+  vertical-align: bottom;
+}
+
+.summary {
+  padding-right: 1rem;
+}
+
+.content {
+  padding-right: 1rem;
+}
+
+.sidebar, .content {
+  padding-left: 1rem;
+  padding-top: 2rem;
+}
+
+.quote {
+  text-indent: -1.7rem;
+  line-height: 0.8;
+  margin-left: 1.7rem;
+}
+
+.quote::before {
+  content: "<";
+  font-size: 2rem;
+  vertical-align: text-top;
+  margin-right: 0.5rem;
+}
+
+.quote::after {
+  content: "/>";
+  font-size: 2rem;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+#lang .nav .squares>span {
+  width: 10px;
+  height: 10px;
+  background: #eeeeee;
+  display: inline-block;
+}
+
+#lang .nav .nav-link {
+  line-height: 1;
+}
+
+#lang .nav .squares>span.filled {
+  background: var(--brand-1);
+}
+
+.exp-item .projects {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+
+.exp-item .projects>[class^="col"] {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.exp-item .projects ul {
+  padding-left: 1.2rem;
+}
+
+@media print {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none !important;
+  }
+  table, thead, tbody, tr, td, th, .table td, .table th {
+    background: transparent!important;
+  }
+}
+
+.sidebar ul[type="disc"], .sidebar ul[type="square"] {
+  padding-left: 1.2rem;
+}
+
+.w-80 {
+  width: 80%;
+}

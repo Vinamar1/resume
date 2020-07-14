@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <title>Rajat Parashar Resume</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link href="./vendor/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="./vendor/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <style>
+    body{
+      font-size: 22px;
+    }
+    ul > li {
+      margin-top: 10px;
+    }
+    body>.container{
+      border: 1px solid #dfdfdf;
+    /*  box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.5);*/
+      padding: 0px;
+      width:100%;
+      color: #666;
+    }
+    fieldset{
+      margin-top: 20px;
+    }
+    .heading,.subheading,dt,#why-i>ul>li,.main-header p.name{
+      color: #333;
+    }
+    .heading{
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .sub-heading{
+      font-size: 23px;
+      font-weight: bold;
+    }
+      header{
+        background-color: #f8f8f8;
+      }
+      .navbar{
+        border-radius: 0px;
+        border-width: 1px 0px 1px;
+        min-height: 40px;
+      }
+      .navbar .navbar-nav{
+        display: table;
+        margin: auto;
+        clear: both;
+        float: none;
+        width: 60%;
+      }
+      .navbar .navbar-nav li {
+        display: table-cell;
+        float: none;
+      }
+      .navbar .navbar-nav li a{
+              text-align: center;
+              padding-top: 10px;
+              padding-bottom: 10px;
+        }
+        .navbar .navbar-nav li a.ra-linkedin{
+                background: url("./linked.png") no-repeat;
+                background-position: 29px -2px;
+                background-size: 45px 41px;
+                color: #007bb6;
+          }
+          .navbar .navbar-nav li a.ra-facebook{
+                  background: url("./facebook.png") no-repeat;
+                  background-position: 29px -4px;
+                  background-size: 45px 41px;
+                  color: #3b5998;
+            }
+            .navbar .navbar-nav li a.ra-twitter{
+                    background: url("./twitter.png") no-repeat;
+                    background-position: 33px -1px;
+                    background-size: 45px 41px;
+                    color: #54ABEE;
+              }
+      .main-header{
+        padding: 30px 40px 10px;
+        }
+        p.name{
+          font-size: 3.5em;
+        }
+        p.name>span{
+          font-size: 12px;
+          position: absolute;
+        }
+      section{
+        padding:10px 40px 0px;
+      }
+      .main-header ul>li.item{
+        font-weight: normal;
+        width: 50%;
+        display: inline-block;
+        float: left;
+        margin: 2px auto;
+        }
+      .main-header ul>li.item > span{
+        font-weight: bold;
+      }
+      .quote{
+        padding: 30px 10px 0px 60px;
+        position: relative;
+      }
+      .quote:before{
+        content: "";
+  background: transparent url("./quote-mark.png") no-repeat;
+  position: absolute;
+  top: 4px;
+  left: -1%;
+  width: 75px;
+  height: 55px;
+  background-position: 6px 2px;
+  background-size: cover;
+}
+      #why-i ul{
+        padding-left: 10px;
+      }
+      #why-i ul{
+        padding-left: 10px;
+      }
+      #skill > ul{
+        padding-left: 10px;
+      }
+      #skill  dt{
+        text-transform: uppercase;
+        color: #666;
+      }
+      #skill dd>ul>li{
+        text-transform: uppercase;
+        margin-left: 5px;
+        padding: 0px;
+      }
+      #skill ul>li:after{
+        content: "/";
+        margin-left: 5px;
+      }
+      #skill ul>li:last-child:after{
+        content: "";
+      }
+      #education table{
+        position: relative;
+        margin-left: 60px;
+      }
+      #education table td{
+        vertical-align: top;
+        padding-bottom: 20px;
+    }
+    #education table td:nth-child(2){
+      text-align: right;
+  }
+      #education table tr{
+        position: relative;
+        line-height: 18px;
+        font-weight: normal;
+      }
+      #education tr p.date, #education tr p.title{font-size: 1.2em; color:#333;font-weight: bold;text-transform: capitalize;}
+        #education table:before{
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -5.2%;
+        width: 2px ;
+        height: 100%;
+        background: #666;
+        z-index: -1;
+      }
+      #education tr:before{
+        content: "";
+  position: absolute;
+  top: 3.5%;
+  left: -46px;
+  width: 10px;
+  height: 10px;
+  background: #666;
+}
+#education tr:after{
+  content: "";
+  position: absolute;
+  top: 5.8%;
+  left: -37px;
+  width: 25px;
+  height: 4px;
+  background: #666;
+}
+#experience .heading > sub{
+    color:rgba(0, 0, 0, 0.6);
+  }
+  #experience .exp-item{
+    position: relative;
+    padding: 0px 0px 0px 15px;
+margin-top: 15px;
+    }
+    #experience .exp-item:before{
+      content: "";
+  position: absolute;
+  top: 6.5%;
+  left: -4px;
+  width: 10px;
+  height: 10px;
+  background: #666;
+      }
+    #experience p.title{
+        font-weight: bold;
+        font-size: 1.4em;
+        color: #000;
+      }
+    #experience p.content{
+        font-size: 1em;
+      }
+      #experience p.period{
+          font-weight: bold;
+        }
+#curriculum ul,#achieve ul{
+  padding-left: 10px;
+}
+      #lang >div{
+        text-align: center;
+        position: relative;
+        text-transform: capitalize;
+      }
+      #lang >div span{
+        text-align: center;
+        margin-top:5px;
+        display: block;
+      }
+      #lang >div span.mid-text{
+        position: absolute;
+        top: 31%;
+        margin: auto;
+        width: 60%;
+        left: 22%;
+      }
+      #diagram-1{
+        background: url("./100.png") no-repeat;
+        width: 100%;
+        height: 182px;
+      }
+      #diagram-2{
+        background: url("./75.png") no-repeat;
+        width: 100%;
+        height: 182px;
+      }
+      #diagram-3{
+        background: url("./25.png") no-repeat;
+        width: 100%;
+        height: 182px;
+      }
+    </style>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./vendor/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+<body>
+<div class="container">
+  <header>
+    <div class="main-header">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="name">Rajat Parashar </p>
+        </div>
+        <div class="col-md-6" style="padding:0px;">
+          <ul class="list-unstyled" style="padding-top:20px;">
+            <li class="item"><span class="glyphicon glyphicon-phone"></span> +91-8054745475</li>
+            <li class="item"><span class="glyphicon glyphicon-home"></span> Merrut ,U.P.</li>
+            <li class="item"><span class="glyphicon glyphicon-envelope"></span> dev.rajatparashar@gmail.com</li>
+          <!--  <li class="item"><span class="glyphicon glyphicon-globe"></span>rajatparashar.blogspot.com</li>-->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav ">
+       <li><a href="https://www.linkedin.com/in/rajatparashar47" class="ra-linkedin">/rajatparashar</a></li>
+        <li><a href="https://www.facebook.com/rajat47hitman" class="ra-facebook">/rajat47hitman</a></li>
+         <li><a href="https://twitter.com/rajatparashar6"  class="ra-twitter">/rajatparashar6</a></li>
+     </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="row">
+      <div class="col-md-12">
+        <fieldset id="about">
+          <legend class =" heading">Career Summary</legend>
+          <p>A well presented, good all round performer who when given a task, has the ability to work quickly and efficiently without asking too many questions. Currently working on Mobile app development in android. With proactive attitude and a strong work ethic, I am sure to be able to make a real contribution to the day-to-day operations of any business.</p>
+      <!--    <p>I 'm an intellectual, independent and enthusiastic person. I can perform either individually or with a team while keeping the ability to lead the team. I 'm looking for a place where I can push me further to contribute in product modeling simultaneously respecting work ethics and face brainstorming milestones. If you want an employee with creative mind &amp; attention seeker and non degradable performance, why don't give me a chance? Go further down to see Why I am the best choice.</p>-->
+          <p class="quote">Dedicated and motivated engineering graduate seeking <b>INTERNSHIP</b> with your Organization that can offer me a uniquely varied and fascinating working environment.</p>
+
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+<!--      <div class="col-md-4">
+        <fieldset id="why-i">
+          <legend class =" heading">Why I Am Best Choice</legend>
+          <ul type="square">
+            <li>I have experience of working in a team and how to succeed.</li>
+            <li>Good decision maker with problem solving abilities.</li>
+            <li>Successful Leader.</li>
+            <li>I have efficiency in submitting any task in time.</li>
+          </ul>
+        </fieldset>
+</div>-->
+<div class="col-md-12">
+        <fieldset id='skill'>
+          <legend class =" heading">Work Skills</legend>
+            <div class="row">
+              <div class="col-md-6">
+                <dl>
+                  <dt>Technical Skills</dt>
+                        <dd>
+                          <ul class="list-inline">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>SASS</li>
+                                <li>JAVASCRIPT</li>
+                                <li>PHP</li>
+                                <li>Basic C++</li>
+                                <li>Wordpress</li>
+                                <li>PhpMyAdmin</li>
+                                <li>Apache Web Server</li>
+                                <li>NPM</li>
+                                <li>CAKEPHP</li>
+                                <li>MS Office</li>
+
+                          </ul>
+                      </dd>
+                    </dl>
+                  </div>
+                    <div class="col-md-6">
+                      <dl>
+                      <dt>Personal Skills</dt>
+                  <dd>
+                    <ul class="list-inline">
+                      <li>Team Player</li>
+                      <li>Creativity</li>
+                      <li>Thinker</li>
+                      <li>Social Friendly</li>
+                      <li>Leadership</li>
+                      <li>Researcher</li>
+                      <li>Flexible &amp; Adaptable</li>
+                      </ul>
+                    </dd>
+                  </dl>
+
+                </div>
+              </div>
+
+        </fieldset>
+</div>
+</div>
+
+<div class="row">
+      <div class="col-md-12">
+        <fieldset id="education">
+          <legend class ="heading">Education</legend>
+            <table><tr>
+                <td>
+                  <p class="title"> High School </p>
+                  <p class="from">Board of High School &amp; Intermediate Education, U.P.</p>
+                  <p class="marks">80%</p>
+                </td>
+                <td>  <p class="date">2011 </p></td>
+
+
+              </tr>
+              <tr>
+                <td>
+                  <p class="title">Intermediate Examination</p>
+                  <p class="from">Board of High School &amp; Intermediate Education, U.P.</p>
+                  <p class="marks">71%</p>
+                </td>
+                <td><p class="date">2013 </p> </td>
+            </tr>
+            <tr>
+              <td>
+                <p class="title">Bachelor in Computer Sciences</p>
+                <p class="from">Beant College Of Engineering &amp; Technology</p>
+                <p class="marks">69% - pursuing</p>
+                <p><span class=" glyphicon glyphicon-asterisk"></span>Favorite subjects- Web Technologies, Data-Structures, RDBMS</p>
+
+               </td>
+              <td><p class="date">2013-2017</p> </td>
+          </tr>
+          <tr>
+            <td>
+            <p class="title">Certification In Web Designing & Development In PHP</p>
+            <p class="from">NETMAX Tech. PVT. LTD., Chandigarh</p>
+            <p class="marks"></p></td>
+          <td><p class="date">2015</p></td>
+        </tr>
+            </table>
+        </fieldset>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+        <fieldset id="experience">
+          <legend class =" heading">Work Experience</legend>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="exp-item">
+                <p class="title"> Designer &amp; Developer , Teqfest.in</p>
+                <p class="content">
+                  <ul type="square">
+                    <li>Controlled launching of Teqfest.in.</li>
+                    <li>Responsible for data handling and Security management and module creation. </li>
+                    <li>Managed the improvised project in real time.</li>
+
+                  </ul>
+                </p>
+                <p class="period">Nov, 2016</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="exp-item">
+                <p class="title"> Primary Developer , B.C.E.T ERP system</p>
+                <p class="content">
+                  <ul type="square">
+                    <li>Responsible for maintenance and crisis handling.</li>
+                    <li>Redesigned the old module of the system with the latest technology available and introduced new advanced module into the system for example <i><b>Result Evaluation on grades, Performance measure</b></i>.</li>
+                  </ul>
+                </p>
+                <p class="period">Nov, 2015 - March, 2016</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="exp-item">
+                <p class="title"> PHP Trainee, NETMAX Pvt. Ltd., Chandigarh</p>
+                <p class="content">
+                  <ul type="square">
+                    <li>Utilized tools like Web server , Web Technologies.</li>
+                    <li>Formulated the working structured model for project on Discussion Forum .</li>
+                  </ul>
+                </p>
+                <p class="period">May - Jun, 2015</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="exp-item">
+                <p class="title"> C++ Trainee, B.C.E.T Gurdaspur</p>
+                <p class="content">
+                  <ul type="square">
+                    <li>Trained to code in C++ Concepts like Class &amp; Objects, File handling ,Error handling</li>
+                    <li>Contributed and Collaborated in Hostel Management System while working as a team member.</li>
+                  </ul>
+                </p>
+                <p class="period">Jun - July, 2014</p>
+              </div>
+            </div>
+            </div>
+        </fieldset>
+      </div>
+      </div>
+        <div class="row">
+        <div class="col-md-6">
+                <fieldset id="curriculum">
+                  <legend class =" heading">Extra Curriculum Activities</legend>
+                  <ul type="disc">
+                    <li>Senior Executive in Computer Society of India, B.C.E.T.</li>
+                    <li>Senior Executive in Fine Arts Club, B.C.E.T.</li>
+                    <li>Attended workshop on <b>YOUTH &amp; SUSTAINABLE DEVELOPMENT GOALS at RGYNID, CHANDIGARH</b>.</li>
+                    <li>Participated in workshop on <b>BUSINESS PROCESS SIMULATION USING ARENA </b> held in B.C.E.T, Gurdaspur.</li>
+                    <li>Participated, Volunteered and Coordinated in various technical, cultural and sports fest under 2013  -  2016.</li>
+
+                  </ul>
+
+                </fieldset>
+          </div>
+      <div class="col-md-6">
+        <fieldset id="achieve">
+          <legend class =" heading">Achievements &amp; Acomplishments</legend>
+            <ul type="disc">
+              <li>Secured first prize with team in TEQFEST 2K15 ,CULTURAL FEST 2K15 ,TEQFEST 2K16 subsequently at BCET, Gurdaspur.</li>
+              <li>Secured first prize with team in TEQNITI '16 ,NIT , JALANDHAR.</li>
+              <li>Honored for organizing two days Fest in BCET, Gurdaspur.</li>
+              <li>Secured Second prize in Chess Competition of the year 2014.</li>
+
+            </ul>
+
+        </fieldset>
+      </div>
+    </div>
+    <div class="row">
+    <div class="col-md-6">
+            <fieldset id="lang">
+              <legend class =" heading">Language</legend>
+              <div class="row">
+                <div class="col-md-4">
+                <div id="diagram-1" class="diagram"></div>
+                <span class="mid-text">Mother Language</span>
+                <span>Hindi</span>
+                </div>
+                <div class="col-md-4">
+                <div id="diagram-2" class="diagram"></div>
+                <span class="mid-text">Intermediate Level</span>
+                <span>English</span>
+                </div>
+                <div class="col-md-4">
+                <div id="diagram-3" class="diagram"></div>
+                <span class="mid-text">Basic Level</span>
+                <span>Punjabi</span>
+                </div>
+              </div>
+
+            </fieldset>
+      </div>
+  <div class="col-md-6">
+    <fieldset id="hobbies">
+      <legend class =" heading">Hobbies &amp; Interests</legend>
+      <p>Good at Video games, plays football, listen Calm Music, cooking, programming</p>
+      <p>Research on advance technologies, traveling historical places, absorbing physicological instincts.</p>
+
+    </fieldset>
+  </div>
+  </div>
+  <nav class="navbar">
+      <p class="navbar-text" style="text-align:center;float:none;"> <b style="color:#333;font-size:14px;"> REFERENCES </b>– Available on request.</p>
+  </nav>
+
+  </section><!-- NOTE: main section -->
+
+
+
+</div><!-- NOTE: outer container -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./vendor/jQuery/jquery.js"></script>
+    <script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./vendor/bootstrap-3.3.7/js/bootstrap.js"></script>
+    <script src="./vendor/jQuery/jquery.circle-diagram.js"></script>
+    <script>
+    $(function() {
+      $('#diagram-id-1').circleDiagram({
+        "percent": "100",
+        "size": "100",
+        "borderWidth": "8",
+        "bgFill": "#e2e2e2",
+        "frFill": "#000",
+        "textSize": "0",
+      //	"textColor": "#585858"
+      });$('#diagram-id-2').circleDiagram({
+    		"percent": "75",
+    		"size": "100",
+    		"borderWidth": "8",
+    		"bgFill": "#e2e2e2",
+    		"frFill": "#000",
+    		"textSize": "0",
+    	//	"textColor": "#585858"
+    	});
+    	$('#diagram-id-3').circleDiagram({
+    		"percent": "25",
+    		"size": "100",
+        "borderWidth": "8",
+    		"bgFill": "#e2e2e2",
+    		"frFill": "#000",
+    		"textSize": "0",
+    	//	"textColor": "#585858"
+    	});
+    });
+    </script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./vendor/ie10-viewport-bug-workaround.js"></script>
+
+
+</body></html>
